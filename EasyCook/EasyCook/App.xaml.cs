@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using EasyCook.Pages;
 
 namespace EasyCook
 {
@@ -9,8 +10,7 @@ namespace EasyCook
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new MyTabbedPage();
         }
 
         protected override void OnStart()
