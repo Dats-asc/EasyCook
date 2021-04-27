@@ -11,5 +11,10 @@ namespace EasyCook.Pages
         {
             InitializeComponent();
         }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            FrameButton.BackgroundColor = Color.DarkRed;
+        }
     }
 }

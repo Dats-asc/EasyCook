@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pages="clr-namespace:EasyCook.Pages"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
-             x:Class="EasyCook.Pages.MyTabbedPage" BarBackground="lightgray">
+            x:Class="EasyCook.Pages.MyTabbedPage"
+            BackgroundColor="White">
 
-  <!--Pages can be added as references or inline-->
-  <pages:RecipesListPage IconImageSource="RecipesListPageIcon.png" />
-  <pages:AddRecipePage IconImageSource="AddRecipePageIcon.png" />
-  <pages:SearchPage IconImageSource="SearchPageIcon.png"/>
+    <!--Pages can be added as references or inline-->
+    <pages:RecipesListPage IconImageSource="RecipesListPageIcon.png" />
+    <pages:AddRecipePage IconImageSource="AddRecipePageIcon.png" />
+    <pages:SearchPage IconImageSource="SearchPageIcon.png"/>
 </TabbedPage>

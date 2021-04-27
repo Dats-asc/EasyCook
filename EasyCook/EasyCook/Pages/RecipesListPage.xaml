@@ -3,7 +3,78 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="EasyCook.Pages.RecipesListPage">
-    <ContentPage.Content>
-        
-    </ContentPage.Content>
+
+    <StackLayout x:Name="dsd">
+        <StackLayout
+HorizontalOptions="Start"
+WidthRequest="250"
+TranslationX="20"
+TranslationY="75">
+            <Label
+Text="Библиотека рецептов"
+FontSize="30"
+FontAttributes="Italic,bold"/>
+        </StackLayout>
+
+        <StackLayout x:Name="Category_Scrollview"
+HorizontalOptions="Center"
+WidthRequest="350"
+TranslationY="100"
+>
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+
+                <StackLayout Orientation="Horizontal" Spacing="25">
+
+                    <StackLayout x:Name="FirstCategory">
+
+                        <Frame BackgroundColor="Gray"
+HorizontalOptions="Center"
+WidthRequest="25"
+HeightRequest="50"
+CornerRadius="40"
+>
+                            <Image Source="AddRecipePageIcon.png"
+HorizontalOptions="Center"
+WidthRequest="50"/>
+                        </Frame>
+
+                        <Label Text="First"
+FontSize="20"
+HorizontalOptions="Center"/>
+
+                    </StackLayout>
+
+                    <StackLayout x:Name="SecondCategory">
+
+                        <Frame BackgroundColor="Gray"
+HorizontalOptions="Center"
+WidthRequest="25"
+HeightRequest="50"
+CornerRadius="40"
+x:Name="FrameButton">
+                            <Image Source="AddRecipePageIcon.png"
+HorizontalOptions="Center"
+WidthRequest="50"/>
+                        </Frame>
+
+                        <Label Text="second"
+FontSize="20"
+HorizontalOptions="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                        </StackLayout.GestureRecognizers>
+
+                    </StackLayout>
+
+
+
+                </StackLayout>
+
+            </ScrollView>
+
+        </StackLayout>
+
+    </StackLayout>
+
+
 </ContentPage>
