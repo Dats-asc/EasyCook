@@ -7,7 +7,7 @@
             BackgroundColor="White">
 
     <!--Pages can be added as references or inline-->
-    <pages:RecipesListPage IconImageSource="RecipesListPageIcon.png" />
-    <pages:AddRecipePage IconImageSource="AddRecipePageIcon.png" />
-    <pages:SearchPage IconImageSource="SearchPageIcon.png"/>
+    <pages:RecipesListPage IconImageSource="RecipesListPageIcon.png"  />
+    <pages:AddRecipePage IconImageSource="AddRecipePageIcon.png"  />
+    <pages:SearchPage IconImageSource="SearchPageIcon.png" />
 </TabbedPage>

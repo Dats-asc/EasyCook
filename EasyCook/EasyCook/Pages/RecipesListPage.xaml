@@ -4,69 +4,153 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="EasyCook.Pages.RecipesListPage">
 
-    <StackLayout x:Name="dsd">
+    <StackLayout>
         <StackLayout
-HorizontalOptions="Start"
-WidthRequest="250"
-TranslationX="20"
-TranslationY="75">
-            <Label
-Text="Библиотека рецептов"
-FontSize="30"
-FontAttributes="Italic,bold"/>
+                    HorizontalOptions="Start"
+                    WidthRequest="250"
+                    TranslationX="20"
+                    TranslationY="75">
+            <Label Text="Библиотека рецептов" FontSize="30" FontAttributes="Italic,bold"/>
         </StackLayout>
 
         <StackLayout x:Name="Category_Scrollview"
-HorizontalOptions="Center"
-WidthRequest="350"
-TranslationY="100"
->
+                    HorizontalOptions="Center"
+                    WidthRequest="350"
+                    TranslationY="100">
+                    
             <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
 
-                <StackLayout Orientation="Horizontal" Spacing="25">
+                <StackLayout Orientation="Horizontal" Spacing="20" TranslationX="5" TranslationY="5">
 
                     <StackLayout x:Name="FirstCategory">
 
-                        <Frame BackgroundColor="Gray"
-HorizontalOptions="Center"
-WidthRequest="25"
-HeightRequest="50"
-CornerRadius="40"
->
-                            <Image Source="AddRecipePageIcon.png"
-HorizontalOptions="Center"
-WidthRequest="50"/>
+                        <Frame  BackgroundColor="Gray"
+                                HorizontalOptions="Center"
+                                WidthRequest="25"
+                                HeightRequest="50"
+                                CornerRadius="30"
+                                HasShadow="False"
+                                
+                                x:Name="FrameButton1">
+
+                            <Image  Source="AddRecipePageIcon.png"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="50"/>
                         </Frame>
 
-                        <Label Text="First"
-FontSize="20"
-HorizontalOptions="Center"/>
-
+                        <Label Text="First" FontSize="20" HorizontalOptions="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped1" />
+                        </StackLayout.GestureRecognizers>
                     </StackLayout>
 
                     <StackLayout x:Name="SecondCategory">
 
-                        <Frame BackgroundColor="Gray"
-HorizontalOptions="Center"
-WidthRequest="25"
-HeightRequest="50"
-CornerRadius="40"
-x:Name="FrameButton">
-                            <Image Source="AddRecipePageIcon.png"
-HorizontalOptions="Center"
-WidthRequest="50"/>
+                        <Frame  BackgroundColor="Gray"
+                                HorizontalOptions="Center"
+                                WidthRequest="25"
+                                HeightRequest="50"
+                                CornerRadius="30"
+                                HasShadow="False"
+                                x:Name="FrameButton2">
+
+
+                            <Image  Source="AddRecipePageIcon.png"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="50"/>
                         </Frame>
 
-                        <Label Text="second"
-FontSize="20"
-HorizontalOptions="Center"/>
+                        <Label Text="Second" FontSize="20" HorizontalOptions="Center"/>
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped2" />
                         </StackLayout.GestureRecognizers>
 
                     </StackLayout>
 
+                    <StackLayout x:Name="ThirdCategory">
 
+                        <Frame  BackgroundColor="Gray"
+                                HorizontalOptions="Center"
+                                WidthRequest="25"
+                                HeightRequest="50"
+                                CornerRadius="30"
+                                HasShadow="False"
+                                x:Name="FrameButton3">
+
+                            <Image  Source="AddRecipePageIcon.png"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="50"/>
+                        </Frame>
+
+                        <Label Text="Third" FontSize="20" HorizontalOptions="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped1" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout x:Name="FourthCategory">
+
+                        <Frame  BackgroundColor="Gray"
+                                HorizontalOptions="Center"
+                                WidthRequest="25"
+                                HeightRequest="50"
+                                CornerRadius="30"
+                                HasShadow="False"
+
+                                x:Name="FrameButton4">
+
+                            <Image  Source="AddRecipePageIcon.png"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="50"/>
+                        </Frame>
+
+                        <Label Text="Fourth" FontSize="20" HorizontalOptions="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped1" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout x:Name="FifthCategory">
+
+                        <Frame  BackgroundColor="Gray"
+                                HorizontalOptions="Center"
+                                WidthRequest="25"
+                                HeightRequest="50"
+                                CornerRadius="30"
+                                HasShadow="False"
+                                x:Name="FrameButton5">
+
+                            <Image  Source="AddRecipePageIcon.png"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="50"/>
+                        </Frame>
+
+                        <Label Text="Fifth" FontSize="20" HorizontalOptions="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped1" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+
+                    <StackLayout x:Name="SixthCategory">
+
+                        <Frame  BackgroundColor="Gray"
+                                HorizontalOptions="Center"
+                                WidthRequest="25"
+                                HeightRequest="50"
+                                CornerRadius="30"
+
+                                x:Name="FrameButton6">
+
+                            <Image  Source="AddRecipePageIcon.png"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="50"/>
+                        </Frame>
+
+                        <Label Text="Sixth" FontSize="20" HorizontalOptions="Center"/>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped1" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
 
                 </StackLayout>
 
@@ -74,7 +158,52 @@ HorizontalOptions="Center"/>
 
         </StackLayout>
 
-    </StackLayout>
+        <StackLayout
+                    HorizontalOptions="Start"
+                    WidthRequest="250"
+                    TranslationX="20"
+                    TranslationY="150">
+            <Label Text="Рецепты" FontSize="30" FontAttributes="Italic,bold" TranslationX="10"/>
+        </StackLayout>
+        <StackLayout>
 
+            <Frame BackgroundColor="yellow"
+               HasShadow="false"
+               TranslationY="160"
+               HorizontalOptions="Center"
+               WidthRequest="330"
+               VerticalOptions="Start">
+        <ScrollView Orientation="Vertical">
+
+            <Grid x:Name="RecipesScrollView"
+              TranslationY="5"
+              HorizontalOptions="Center"
+              WidthRequest="350"
+              BackgroundColor="Black">
+              
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />    
+        </Grid.ColumnDefinitions>
+
+
+        <Grid.RowDefinitions >
+            <RowDefinition Height="250" />
+        </Grid.RowDefinitions>
+
+        <BoxView Color="Red" Grid.Row="0" Grid.Column="0" CornerRadius="30" TranslationX="5" TranslationY="5"/>
+        <BoxView Color="blue" Grid.Row="0" Grid.Column="1" TranslationY="5"/>
+        
+ 
+        </Grid>
+        
+        </ScrollView>
+            </Frame>
+
+        </StackLayout>
+        
+
+    </StackLayout>
 
 </ContentPage>
