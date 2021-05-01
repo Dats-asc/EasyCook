@@ -59,7 +59,6 @@ namespace EasyCook
                     return "с.л.";
                 case Units.Cup:
                     return "чашка";
-                    break;
                 case Units.Glass:
                     return "стакан";
                 default:
