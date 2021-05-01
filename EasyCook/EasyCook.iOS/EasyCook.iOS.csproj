@@ -113,6 +113,8 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Image.imageset\upload.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -135,5 +137,11 @@
       <Project>{81793C35-0F09-41B6-ACE3-AA544A48F982}</Project>
       <Name>EasyCook</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\upload.png" />
+    <BundleResource Include="Resources\AddRecipePageIcon.png" />
+    <BundleResource Include="Resources\SearchPageIcon.png" />
+    <BundleResource Include="Resources\RecipesListPageIcon.png" />
   </ItemGroup>
 </Project>
