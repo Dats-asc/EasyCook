@@ -25,7 +25,13 @@ namespace EasyCook
 
     public enum Category
     {
-
+        Beverages,
+        Bake,
+        Dessert,
+        Snacks,
+        Salad,
+        Sauce,
+        Soup,
     }
 
     public class Ingridient
@@ -86,7 +92,7 @@ namespace EasyCook
     public class Recipe
     {
         [PrimaryKey, AutoIncrement, Column("_id")]
-        public int Id { get; set; }
+        private int Id { get; set; }
 
         public string Name { get; set; }
         public List<Ingridient> Ingridients { get; set; }

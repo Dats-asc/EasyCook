@@ -11,6 +11,7 @@ namespace EasyCook
         {
             InitializeComponent();
             MainPage = new MyTabbedPage();
+            //MainPage = new NavigationPage(new TestPage());
         }
 
         protected override void OnStart()
