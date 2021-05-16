@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasyCook.Pages.TestPage"
+             xmlns:local="clr-namespace:EasyCook"
+             x:Name="MainContentPage">
+    <ScrollView>
+        <StackLayout x:Name="AddRecipeMainLayout" HorizontalOptions="Fill" VerticalOptions="Fill" Spacing="20" >
+            <StackLayout x:Name="UpperInterval">
+                <!--Верхний интервал-->
+            </StackLayout>
+
+            <Label x:Name="AddRecipeLabel" HorizontalOptions="Center" Text="Добавить новый рецепт" FontSize="30" FontAttributes="Bold"/>
+            <!--Текстовое поле-->
+
+            <StackLayout x:Name="AddRecipeImageButton">
+                <!--Добавление изображения-->
+            </StackLayout>
+
+            <StackLayout x:Name="AddRecipeNameLayout" HorizontalOptions="Fill" Spacing="10"  TranslationX="15">
+                <!--Название рецепта layout-->
+                <Label x:Name="AddRecipeNameLabel" HorizontalOptions="Start" Text="Называние" FontSize="20" FontAttributes="Bold"/>
+
+                <Frame x:Name="NameFrame" HasShadow="false" Padding="0" CornerRadius="20" BorderColor="Gray" HorizontalOptions="Start">
+                    <local:CustomEntry x:Name="NameEntry" TranslationX="10" Placeholder="Введите название рецепта" 
+                                       PlaceholderColor="Gray" HorizontalTextAlignment="Start" 
+                                       VerticalOptions="Center"  FontSize="20" 
+                                       Completed="NameEntry_Completed"/>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout x:Name="DescriptionLayout" Spacing="10" TranslationX="15">   <!--Описание-->
+                <Label Text="Описание" FontSize="20" FontAttributes="Bold" HorizontalOptions="Start" />
+
+                <Frame x:Name="DescriptionFrame" BorderColor="Gray" HasShadow="False" Padding="0" 
+                           CornerRadius="20" HorizontalOptions="Start" >
+                    <Editor x:Name="DescriptionEditor" PlaceholderColor="Gray" AutoSize="TextChanges" TranslationX="10"
+                            Completed="DescriptionEditor_Completed"/>
+                </Frame>
+            </StackLayout>
+            
+            <StackLayout x:Name="IngridientsLayout" HorizontalOptions="Fill">
+                <!--Поле ингридиентов-->
+                <StackLayout x:Name="ScrollViewLayout" Spacing="10" HorizontalOptions="Fill" TranslationX="15">
+                    <Label Text="Ингридиенты" FontSize="20" FontAttributes="Bold" />
+
+                    <Frame x:Name="IngridientDescriptionFrame" BorderColor="Gray" HasShadow="False" Padding="0" 
+                           CornerRadius="20" HorizontalOptions="Start">
+                        <Editor x:Name="IngridientEditor" PlaceholderColor="Gray" AutoSize="TextChanges" TranslationX="10"
+                                Completed="IngridientEditor_Completed"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout TranslationX="15"> <!--Категория-->
+                <Label Text="Категория" FontSize="20" FontAttributes="Bold" />
+
+                <Frame x:Name="PickerFrame" BorderColor="Gray" HasShadow="False" Padding="0" 
+                           CornerRadius="20" HorizontalOptions="Start" >
+                    <Picker TranslationX="10" x:Name="CategoryPicker" SelectedIndexChanged="CategoryPicker_SelectedIndexChanged">
+                        <Picker.Items>
+                            <x:String>Напитки</x:String>
+                            <x:String>Выпечка</x:String>
+                            <x:String>Первые блюда</x:String>
+                            <x:String>Вторые блюда</x:String>
+                            <x:String>Десерты</x:String>
+                            <x:String>Закуски</x:String>
+                            <x:String>Салаты</x:String>
+                            <x:String>Соусы</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout TranslationX="15"> <!--Сложность-->
+                <Label Text="Сложность" FontSize="20" FontAttributes="Bold"/>
+
+                <Frame x:Name="ComplexityFrame" BorderColor="Gray" HasShadow="False" Padding="0" 
+                           CornerRadius="20" HorizontalOptions="Start" WidthRequest="367.2" >
+                    <Picker x:Name="ComplexityPicker" TranslationX="10" SelectedIndexChanged="ComplexityPicker_SelectedIndexChanged">
+                        <Picker.Items>
+                            <x:String>Легко</x:String>
+                            <x:String>Средне</x:String>
+                            <x:String>Сложно</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout TranslationX="15">  <!--Время-->
+                <Label x:Name="TimeLabel" HorizontalOptions="Start" Text="Время готовки" FontSize="20" FontAttributes="Bold"/>
+
+                <Frame x:Name="TimeEntryFrome" HasShadow="false" Padding="0" CornerRadius="20" BorderColor="Gray" HorizontalOptions="Start">
+                    <local:CustomEntry x:Name="TimeEntry" TranslationX="10" HorizontalTextAlignment="Start" 
+                                   VerticalOptions="Center"  FontSize="20" WidthRequest="367.2" 
+                                    Completed="TimeEntry_Completed" Keyboard="Numeric"/>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Fill"> <!--Кнопка сохранения-->
+                <Button x:Name="SaveButton" Text="Сохранить" FontSize="15" FontAttributes="Bold" HorizontalOptions="Center" 
+                        WidthRequest="150" CornerRadius="20"
+                        IsEnabled="False"
+                        Clicked="SaveButton_Clicked"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

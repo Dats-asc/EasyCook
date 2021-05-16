@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
-namespace EasyCook.Pages.Page_objects
+namespace EasyCook
 {
-    class Class1
+    public class CustomEntry : Entry
     {
+        
     }
 }
- 

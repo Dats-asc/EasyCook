@@ -4,24 +4,6 @@ using SQLite;
 
 namespace EasyCook
 {
-    public enum Units
-    {
-        Gram,
-        Kilogram,
-        Liter,
-        MilLiter,
-        Teaspoon,
-        Tablespoon,
-        Cup,
-        Glass,
-    }
-
-    public enum Complexity
-    {
-        Easy,
-        Medium,
-        Hard,
-    }
 
     public enum Category
     {
@@ -34,82 +16,32 @@ namespace EasyCook
         Soup,
     }
 
-    public class Ingridient
-    {
-        public string Name { get; set; }
-        public Units Measure { get; set; }
-        public int Amount { get; set; }
-
-        public Ingridient(string name, Units measure, int amount)
-        {
-            Name = name;
-            Measure = measure;
-            Amount = amount;
-        }
-
-        public string UnitToString(Units unit)
-         {
-            switch (unit)
-            {
-                case Units.Gram:
-                    return "гр.";
-                case Units.Kilogram:
-                    return "кг.";
-                case Units.Liter:
-                    return "л.";
-                case Units.MilLiter:
-                    return "мл.";
-                case Units.Teaspoon:
-                    return "ч.л.";
-                case Units.Tablespoon:
-                    return "с.л.";
-                case Units.Cup:
-                    return "чашка";
-                case Units.Glass:
-                    return "стакан";
-                default:
-                    return "Wrong";
-            }
-        }
-
-        public string ComplexityToString(Complexity complexity)
-        {
-            switch (complexity)
-            {
-                case Complexity.Easy:
-                    return "Легкая";
-                case Complexity.Medium:
-                    return "Средняя";
-                case Complexity.Hard:
-                    return "Сложная";
-                default:
-                    return "wrong";
-            }
-        }
-    }
-
     [Table("Recipe")]
     public class Recipe
     {
         [PrimaryKey, AutoIncrement, Column("_id")]
-        private int Id { get; set; }
+        public int Id { get; set; }
 
         public string Name { get; set; }
-        public List<Ingridient> Ingridients { get; set; }
-        public Complexity Complex { get; set; }
-        public Category RecipeCategory { get; set; }
+        public string Description { get; set; }
+        public string Ingridients { get; set; }
+        public string Complex { get; set; }
+        public string RecipeCategory { get; set; }
+        public int Time { get; set; }
 
         public Recipe() {  }
 
-        public Recipe(string name, Complexity complex, Category category)
+        public Recipe(string name, string description, string complex, string category, string ingridients, int time)
         {
             Name = name;
-            Ingridients = new List<Ingridient>();
+            Description = description;
+            Ingridients = ingridients;
             Complex = complex;
             RecipeCategory = category;
+            Time = time;
         }
 
-        public Recipe(string name, List<Ingridient> ingridients, Complexity complex, Category category)
+        public Recipe(string name, string ingridients, string complex, string category)
         {
             Name = name;
             Ingridients = ingridients;

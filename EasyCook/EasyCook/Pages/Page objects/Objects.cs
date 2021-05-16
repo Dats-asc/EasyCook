@@ -1,77 +1,100 @@
 ﻿using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
-namespace EasyCook.Pages.Page_objects
+using Xamarin.Forms.Xaml;
+namespace EasyCook.Pages
 {
-    class IngridientsLayout : ContentPage
+
+    public class EntryWithFrame
     {
-        Recipe newRecipe;
-
-        StackLayout Ingridients = new StackLayout()
-        {
-            HorizontalOptions = LayoutOptions.Fill,
-            Spacing = 20,
-        };
-
-        public IngridientsLayout(Recipe recipe)
-        {
-            newRecipe = recipe;
-        }
-    }
-
-    class Ingridient : ContentPage
-    {
-        StackLayout IngridientLayout = new StackLayout()
+        public StackLayout layout = new StackLayout()
         {
             HorizontalOptions = LayoutOptions.Fill,
             Spacing = 10,
         };
 
-        Entry IngridientNameEntry = new Entry()
+        public Frame frame = new Frame()
         {
-            FontSize = 20,
-            Placeholder = "Введите название ингридиента",
-            PlaceholderColor = Color.Gray,
+            HasShadow = false,
+            Padding = 0,
+            CornerRadius = 20,
+            HorizontalOptions = LayoutOptions.Start,
+            WidthRequest = App._SETWIDTH,
+            BorderColor = Color.Gray,
+            
         };
+
+        public CustomEntry customEntry = new CustomEntry()
+        {
+            HorizontalTextAlignment = TextAlignment.Start,
+            VerticalOptions = LayoutOptions.Center,
+            PlaceholderColor = Color.Gray,
+            FontSize = 20,
+            TranslationX = 10,
+        };
+
+        public EntryWithFrame(string placeHolderName)
+        {
+            customEntry.Placeholder = placeHolderName;
+            
+
+            layout.Children.Add(customEntry);
+            frame.Content = layout;
+        }
+
+    }
+
+    public class AddIngridientButton
+    {
+        public static Button addIngridientButton = new Button()
+        {
+            HorizontalOptions = LayoutOptions.Center,
+            WidthRequest = 175,
+            Text = "Добавить ингридиент",
+            FontSize = 15,
+            CornerRadius = 20,
+        };
+
+        
+    }
+
+    public class IngridientLayout
+    {
+        public StackLayout GetIngridientLayout()
+        {
+            Label label = new Label
+            {
+                Text = "Ингридиент",
+                FontSize = 20,
+                FontAttributes = FontAttributes.Bold,
+                HorizontalOptions = LayoutOptions.Start,
+            };
+
+            var ingridientsNameEntry = new EntryWithFrame("Введите название рецепта");
+
+            var ingridientCountEntry = new EntryWithFrame("Введите количество");
+
+
+            ingridientsNameEntry.customEntry.Completed += IngridientsNameEntryCompleted;
+            ingridientCountEntry.customEntry.Completed += IngridientsCountEntryCompleted;
+
+            StackLayout newIngridient = new StackLayout() { Spacing = 10};
+            newIngridient.Children.Add(label);
+            newIngridient.Children.Add(ingridientsNameEntry.frame);
+            newIngridient.Children.Add(ingridientCountEntry.frame);
+
+            ingridientCountEntry.customEntry.Placeholder = "DASDASDASDASDASDASD";
+
+            return newIngridient;
+        }
 
         public void IngridientsNameEntryCompleted(object sender, EventArgs e)
         {
 
         }
 
-        Entry IngridientCountEntry = new Entry()
-        {
-            FontSize = 20,
-            Placeholder = "Введите количество",
-            PlaceholderColor = Color.Gray,
-        };
-
         public void IngridientsCountEntryCompleted(object sender, EventArgs e)
         {
-
-        }
-
-        Button AddIngridientButton = new Button()
-        {
-            HorizontalOptions = LayoutOptions.Center,
-            WidthRequest = 100,
-            Text = "Добавить ингридиент",
-        };
-
-        public void AddIngridientsButtonClicked(object sender, EventArgs e)
-        {
-
-        }
-
-        public Ingridient()
-        {
-            IngridientLayout.Children.Add(IngridientNameEntry);
-            IngridientLayout.Children.Add(IngridientCountEntry);
-            IngridientLayout.Children.Add(AddIngridientButton);
-
-            AddIngridientButton.Clicked += AddIngridientsButtonClicked;
-            IngridientNameEntry.Completed += IngridientsNameEntryCompleted;
-            IngridientCountEntry.Completed += IngridientsCountEntryCompleted;
 
         }
     }
