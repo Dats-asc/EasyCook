@@ -6,38 +6,36 @@
         <ScrollView>
             <StackLayout x:Name="RecipePageMainLayout" Spacing="10" TranslationX="10">
 
-                <StackLayout HorizontalOptions="Fill" > <!--Верхний интервал-->
-                    <Frame HeightRequest="100" HasShadow="False">
-                        <Button Text="Обновить" Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="Center"
+                <StackLayout HorizontalOptions="Fill"> <!--Верхний интервал-->
+                    <Frame HasShadow="True" CornerRadius="60" HorizontalOptions="Center" TranslationY="10" WidthRequest="150" HeightRequest="40">
+                        <Button BackgroundColor ="White" Text="Обновить" Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="Center"
                                 CornerRadius="20" WidthRequest="200" FontSize="16"/>
                     </Frame>
                 </StackLayout>
 
-                <StackLayout HorizontalOptions="Start" Spacing="20">
+                <StackLayout HorizontalOptions="Start" Spacing="20" TranslationY="20">
                     <Label Text="Библиотека рецептов" FontSize="30" FontAttributes="Italic,bold"/>
                 </StackLayout>
 
                 <StackLayout x:Name="RecipePageCategories" HorizontalOptions="Start"> <!--Категории-->
                     <StackLayout x:Name="Category_Scrollview" TranslationX="10"
                     HorizontalOptions="Center"
-                    WidthRequest="367.2" HeightRequest="200">
+                    WidthRequest="367.2" HeightRequest="220">
 
-                        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" TranslationX="-10" TranslationY="20">
 
                             <StackLayout Orientation="Horizontal" Spacing="20" TranslationX="5" TranslationY="5">
 
                                 <StackLayout x:Name="FirstCategory" Spacing="3">
 
-                                    <Frame  BackgroundColor="Gray"
+                                    <Frame  BackgroundColor="white"
                                 HorizontalOptions="Center"
                                 WidthRequest="25"
                                 HeightRequest="50"
                                 CornerRadius="30"
-                                HasShadow="False"
-                                
                                 x:Name="FrameButton1">
 
-                                        <Image  Source="AddRecipePageIcon.png"
+                                        <Image  Source="soup.png"
                                     HorizontalOptions="Center"
                                     WidthRequest="50"/>
                                     </Frame>
@@ -50,16 +48,16 @@
 
                                 <StackLayout x:Name="SecondCategory" Spacing="3">
 
-                                    <Frame  BackgroundColor="Gray"
+                                    <Frame  BackgroundColor="White"
                                 HorizontalOptions="Center"
                                 WidthRequest="25"
                                 HeightRequest="50"
                                 CornerRadius="30"
-                                HasShadow="False"
+                                
                                 x:Name="FrameButton2">
 
 
-                                        <Image  Source="AddRecipePageIcon.png"
+                                        <Image  Source="spaguetti.png"
                                     HorizontalOptions="Center"
                                     WidthRequest="50"/>
                                     </Frame>
@@ -72,15 +70,14 @@
 
                                 <StackLayout x:Name="ThirdCategory" Spacing="3">
 
-                                    <Frame  BackgroundColor="Gray"
+                                    <Frame  BackgroundColor="White"
                                 HorizontalOptions="Center"
                                 WidthRequest="25"
                                 HeightRequest="50"
                                 CornerRadius="30"
-                                HasShadow="False"
                                 x:Name="FrameButton3">
 
-                                        <Image  Source="AddRecipePageIcon.png"
+                                        <Image  Source="coffee.png"
                                     HorizontalOptions="Center"
                                     WidthRequest="50"/>
                                     </Frame>
@@ -93,16 +90,14 @@
 
                                 <StackLayout x:Name="FourthCategory" Spacing="3">
 
-                                    <Frame  BackgroundColor="Gray"
+                                    <Frame  BackgroundColor="White"
                                 HorizontalOptions="Center"
                                 WidthRequest="25"
                                 HeightRequest="50"
                                 CornerRadius="30"
-                                HasShadow="False"
-
                                 x:Name="FrameButton4">
 
-                                        <Image  Source="AddRecipePageIcon.png"
+                                        <Image  Source="pancake.png"
                                     HorizontalOptions="Center"
                                     WidthRequest="50"/>
                                     </Frame>
@@ -115,15 +110,14 @@
 
                                 <StackLayout x:Name="FifthCategory" Spacing="3">
 
-                                    <Frame  BackgroundColor="Gray"
+                                    <Frame  BackgroundColor="White"
                                 HorizontalOptions="Center"
                                 WidthRequest="25"
                                 HeightRequest="50"
                                 CornerRadius="30"
-                                HasShadow="False"
                                 x:Name="FrameButton5">
 
-                                        <Image  Source="AddRecipePageIcon.png"
+                                        <Image  Source="icecream.png"
                                     HorizontalOptions="Center"
                                     WidthRequest="50"/>
                                     </Frame>
@@ -136,7 +130,7 @@
 
                                 <StackLayout x:Name="SixthCategory" Spacing="3">
 
-                                    <Frame  BackgroundColor="Gray"
+                                    <Frame  BackgroundColor="White"
                                 HorizontalOptions="Center"
                                 WidthRequest="25"
                                 HeightRequest="50"
@@ -144,7 +138,7 @@
 
                                 x:Name="FrameButton6">
 
-                                        <Image  Source="AddRecipePageIcon.png"
+                                        <Image  Source="pizza.png"
                                     HorizontalOptions="Center"
                                     WidthRequest="50"/>
                                     </Frame>
@@ -157,14 +151,14 @@
 
                                 <StackLayout x:Name="SeventhCategory" Spacing="3">
 
-                                    <Frame  BackgroundColor="Gray"
+                                    <Frame  BackgroundColor="White"
                                 HorizontalOptions="Center"
                                 WidthRequest="25"
                                 HeightRequest="50"
                                 CornerRadius="30"
                                             x:Name="FrameButton7">
 
-                                        <Image  Source="AddRecipePageIcon.png"
+                                        <Image  Source="salad.png"
                                     HorizontalOptions="Center"
                                     WidthRequest="50"/>
                                     </Frame>
@@ -175,15 +169,15 @@
                                     </StackLayout.GestureRecognizers>
                                 </StackLayout>
 
-                                <StackLayout x:Name="EithCategory" >
+                                <StackLayout x:Name="EithCategory">
 
-                                    <Frame  BackgroundColor="Gray"
+                                    <Frame  BackgroundColor="White"
                                 HorizontalOptions="Center"
                                 WidthRequest="25"
                                 HeightRequest="50"
                                 CornerRadius="30"
                                             x:Name="FrameButton8">
-                                        <Image  Source="AddRecipePageIcon.png"
+                                        <Image  Source="sauce.png"
                                     HorizontalOptions="Center"
                                     WidthRequest="50"/>
                                     </Frame>
@@ -201,7 +195,7 @@
                     </StackLayout>
                 </StackLayout>
 
-                <StackLayout HorizontalOptions="Start">
+                <StackLayout HorizontalOptions="Start" TranslationY="-50">
                     <Label Text="Рецепты" FontSize="30" FontAttributes="Italic,bold"    />
                 </StackLayout>
 

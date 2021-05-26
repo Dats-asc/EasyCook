@@ -5,10 +5,11 @@
             android:TabbedPage.ToolbarPlacement="Bottom"
             x:Class="EasyCook.Pages.MyTabbedPage"
             BackgroundColor="White"
-            x:Name="MainTabbedPage">
+            x:Name="MainTabbedPage"
+            NavigationPage.HasNavigationBar="False">
 
     <!--Pages can be added as references or inline-->
-    <pages:NewRecipeListPage IconImageSource="RecipesListPageIcon.png"  />
-    <pages:TestPage IconImageSource="AddRecipePageIcon.png"  />
-    <pages:SearchPage IconImageSource="SearchPageIcon.png" />
+    <pages:NewRecipeListPage IconImageSource="book.png"/>
+    <pages:TestPage IconImageSource="add.png"  />
+    <pages:SearchPage IconImageSource="search3.png" />
 </TabbedPage>

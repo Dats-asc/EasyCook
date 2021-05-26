@@ -77,7 +77,7 @@ namespace EasyCook.Pages
             LoadRecipes(App.Database.GetItems());
             if(TapGestureRecognizerStack.Count != 0)
             {
-                TapGestureRecognizerStack.Pop().BackgroundColor = Color.Gray;
+                TapGestureRecognizerStack.Pop().BackgroundColor = Color.Yellow;
             }
         }
 
@@ -100,7 +100,7 @@ namespace EasyCook.Pages
             if (TapGestureRecognizerStack.Count != 0)
             {
                 var elem = TapGestureRecognizerStack.Pop();
-                elem.BackgroundColor = Color.Gray;
+                elem.BackgroundColor = Color.White;
             }
 
             frame.BackgroundColor = Color.Yellow;
