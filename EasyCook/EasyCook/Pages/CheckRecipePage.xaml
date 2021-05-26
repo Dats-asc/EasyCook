@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasyCook.Pages.CheckRecipePage">
+    <ScrollView>
+        <StackLayout x:Name="RecipePageMainLayout" Spacing="20" TranslationX="15" BackgroundColor="White">
+            <StackLayout>
+                <Frame HeightRequest="50" HasShadow="False"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label x:Name="RecipeName" FontSize="20" FontAttributes="Bold"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Описание: " FontSize="20" FontAttributes="Bold" />
+                <Frame HorizontalOptions="Start" WidthRequest="367.2" CornerRadius="30" Padding="0">
+                    <Label TranslationX="10" x:Name="Description" FontSize="20" />
+                </Frame>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Ингридиенты: " FontSize="20" FontAttributes="Bold" />
+                <Frame HorizontalOptions="Start" WidthRequest="367.2" CornerRadius="30" Padding="0">
+                    <Label TranslationX="10" x:Name="Ingridients" FontSize="20"/>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout>
+                <Label x:Name="Category" FontSize="20" FontAttributes="Bold"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label x:Name="Comlexity" FontSize="20" FontAttributes="Bold"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label x:Name="Time" FontSize="20" FontAttributes="Bold"/>
+            </StackLayout>
+
+            <StackLayout TranslationY="20" TranslationX="-10" HorizontalOptions="Center">
+                <Button x:Name="DeleteButton" Text="Удалить рецепт" BackgroundColor="Red" CornerRadius="20"
+                        Clicked="Button_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

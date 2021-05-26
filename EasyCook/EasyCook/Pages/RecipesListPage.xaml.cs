@@ -22,4 +22,6 @@ namespace EasyCook.Pages
             FrameButton2.BackgroundColor = Color.DarkRed;
         }
     }
+
+    
 }

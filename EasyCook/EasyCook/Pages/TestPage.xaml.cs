@@ -20,9 +20,6 @@ namespace EasyCook.Pages
             FieldsAreEmpty = new bool[5];
 
             Installation();
-
-            
-
         }
 
         private void Installation()
@@ -75,13 +72,27 @@ namespace EasyCook.Pages
         {
             var newRecipe = new Recipe()
             {
-                Name = AddRecipeNameLabel.Text,
-                Description = DescriptionEditor.Text,
+                Name = NameEntry.Text,
                 Ingridients = IngridientEditor.Text,
                 Complex = ComplexityPicker.Items[ComplexityPicker.SelectedIndex],
                 RecipeCategory = CategoryPicker.Items[CategoryPicker.SelectedIndex],
                 Time = int.Parse(TimeEntry.Text.Split(' ')[0]),
             };
+
+            if (DescriptionEditor.Text != null)
+            {
+                newRecipe.Description = DescriptionEditor.Text;
+            }
+            else
+            {
+                newRecipe.Description = "-";
+            }
+
+            App.Database.SaveItem(newRecipe);
+
+            SaveButton.Text = "Сохранено";
+            SaveButton.IsEnabled = false;
+            
         }
 
 

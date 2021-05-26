@@ -5,7 +5,7 @@
     x:Class="EasyCook.Pages.RecipesListPage"
     >
 
-    <StackLayout>
+    <StackLayout Spacing="10">
         <StackLayout
                     HorizontalOptions="Start"
                     WidthRequest="250"
@@ -166,44 +166,10 @@
                     TranslationY="150">
             <Label Text="Рецепты" FontSize="30" FontAttributes="Italic,bold" TranslationX="10"/>
         </StackLayout>
-        <StackLayout>
 
-            <Frame BackgroundColor="yellow"
-               HasShadow="false"
-               TranslationY="160"
-               HorizontalOptions="Center"
-               WidthRequest="330"
-               VerticalOptions="Start">
-        <ScrollView Orientation="Vertical">
-
-            <Grid x:Name="RecipesScrollView"
-              TranslationY="5"
-              HorizontalOptions="Center"
-              WidthRequest="350"
-              BackgroundColor="Black">
-              
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />    
-        </Grid.ColumnDefinitions>
-
-
-        <Grid.RowDefinitions >
-            <RowDefinition Height="250" />
-        </Grid.RowDefinitions>
-
-        <BoxView Color="Red" Grid.Row="0" Grid.Column="0" CornerRadius="30" TranslationX="5" TranslationY="5"/>
-        <BoxView Color="blue" Grid.Row="0" Grid.Column="1" TranslationY="5"/>
-        
- 
-        </Grid>
-        
-        </ScrollView>
-            </Frame>
-
+        <StackLayout x:Name="RecipeMainLayout" >
+            
         </StackLayout>
-        
 
     </StackLayout>
 

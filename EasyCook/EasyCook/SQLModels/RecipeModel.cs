@@ -31,17 +31,7 @@ namespace EasyCook
 
         public Recipe() {  }
 
-        public Recipe(string name, string description, string complex, string category, string ingridients, int time)
-        {
-            Name = name;
-            Description = description;
-            Ingridients = ingridients;
-            Complex = complex;
-            RecipeCategory = category;
-            Time = time;
-        }
-
-        public Recipe(string name, string ingridients, string complex, string category)
+        public Recipe(string name, string ingridients, string complex, string category, int time)
         {
             Name = name;
             Ingridients = ingridients;
@@ -85,6 +75,15 @@ namespace EasyCook
             else
             {
                 return recipeDatabase.Insert(item);
+            }
+        }
+
+        public void Clear()
+        {
+            var items = GetItems();
+            foreach(Recipe recipe in items)
+            {
+                DeleteItem(recipe.Id);
             }
         }
     }
