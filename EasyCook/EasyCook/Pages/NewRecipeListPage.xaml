@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasyCook.Pages.NewRecipeListPage">
+    <StackLayout>
+        <ScrollView>
+            <StackLayout x:Name="RecipePageMainLayout" Spacing="10" TranslationX="10">
+
+                <StackLayout HorizontalOptions="Fill" > <!--Верхний интервал-->
+                    <Frame HeightRequest="100" HasShadow="False">
+                        <Button Text="Обновить" Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="Center"
+                                CornerRadius="20" WidthRequest="200" FontSize="16"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start" Spacing="20">
+                    <Label Text="Библиотека рецептов" FontSize="30" FontAttributes="Italic,bold"/>
+                </StackLayout>
+
+                <StackLayout x:Name="RecipePageCategories" HorizontalOptions="Start"> <!--Категории-->
+                    <StackLayout x:Name="Category_Scrollview" TranslationX="10"
+                    HorizontalOptions="Center"
+                    WidthRequest="367.2" HeightRequest="200">
+
+                        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+
+                            <StackLayout Orientation="Horizontal" Spacing="20" TranslationX="5" TranslationY="5">
+
+                                <StackLayout x:Name="FirstCategory" Spacing="3">
+
+                                    <Frame  BackgroundColor="Gray"
+                                HorizontalOptions="Center"
+                                WidthRequest="25"
+                                HeightRequest="50"
+                                CornerRadius="30"
+                                HasShadow="False"
+                                
+                                x:Name="FrameButton1">
+
+                                        <Image  Source="AddRecipePageIcon.png"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="50"/>
+                                    </Frame>
+
+                                    <Label Text="Первые блюда" FontSize="15" HorizontalOptions="Center"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer  Tapped="TapGestureRecognizer_Tapped"/>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+
+                                <StackLayout x:Name="SecondCategory" Spacing="3">
+
+                                    <Frame  BackgroundColor="Gray"
+                                HorizontalOptions="Center"
+                                WidthRequest="25"
+                                HeightRequest="50"
+                                CornerRadius="30"
+                                HasShadow="False"
+                                x:Name="FrameButton2">
+
+
+                                        <Image  Source="AddRecipePageIcon.png"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="50"/>
+                                    </Frame>
+
+                                    <Label Text="Вторые блюда" FontSize="15" HorizontalOptions="Center"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+
+                                <StackLayout x:Name="ThirdCategory" Spacing="3">
+
+                                    <Frame  BackgroundColor="Gray"
+                                HorizontalOptions="Center"
+                                WidthRequest="25"
+                                HeightRequest="50"
+                                CornerRadius="30"
+                                HasShadow="False"
+                                x:Name="FrameButton3">
+
+                                        <Image  Source="AddRecipePageIcon.png"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="50"/>
+                                    </Frame>
+
+                                    <Label Text="Напитки" FontSize="15" HorizontalOptions="Center"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+
+                                <StackLayout x:Name="FourthCategory" Spacing="3">
+
+                                    <Frame  BackgroundColor="Gray"
+                                HorizontalOptions="Center"
+                                WidthRequest="25"
+                                HeightRequest="50"
+                                CornerRadius="30"
+                                HasShadow="False"
+
+                                x:Name="FrameButton4">
+
+                                        <Image  Source="AddRecipePageIcon.png"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="50"/>
+                                    </Frame>
+
+                                    <Label Text="Выпечка" FontSize="15" HorizontalOptions="Center"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+
+                                <StackLayout x:Name="FifthCategory" Spacing="3">
+
+                                    <Frame  BackgroundColor="Gray"
+                                HorizontalOptions="Center"
+                                WidthRequest="25"
+                                HeightRequest="50"
+                                CornerRadius="30"
+                                HasShadow="False"
+                                x:Name="FrameButton5">
+
+                                        <Image  Source="AddRecipePageIcon.png"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="50"/>
+                                    </Frame>
+
+                                    <Label Text="Десерты" FontSize="15" HorizontalOptions="Center"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4"/>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+
+                                <StackLayout x:Name="SixthCategory" Spacing="3">
+
+                                    <Frame  BackgroundColor="Gray"
+                                HorizontalOptions="Center"
+                                WidthRequest="25"
+                                HeightRequest="50"
+                                CornerRadius="30"
+
+                                x:Name="FrameButton6">
+
+                                        <Image  Source="AddRecipePageIcon.png"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="50"/>
+                                    </Frame>
+
+                                    <Label Text="Закуски" FontSize="15" HorizontalOptions="Center"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_5"/>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+
+                                <StackLayout x:Name="SeventhCategory" Spacing="3">
+
+                                    <Frame  BackgroundColor="Gray"
+                                HorizontalOptions="Center"
+                                WidthRequest="25"
+                                HeightRequest="50"
+                                CornerRadius="30"
+                                            x:Name="FrameButton7">
+
+                                        <Image  Source="AddRecipePageIcon.png"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="50"/>
+                                    </Frame>
+
+                                    <Label Text="Салаты" FontSize="15" HorizontalOptions="Center"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_6"/>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+
+                                <StackLayout x:Name="EithCategory" >
+
+                                    <Frame  BackgroundColor="Gray"
+                                HorizontalOptions="Center"
+                                WidthRequest="25"
+                                HeightRequest="50"
+                                CornerRadius="30"
+                                            x:Name="FrameButton8">
+                                        <Image  Source="AddRecipePageIcon.png"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="50"/>
+                                    </Frame>
+
+                                    <Label Text="Соусы" FontSize="15" HorizontalOptions="Center"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_7"/>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+
+                            </StackLayout>
+
+                        </ScrollView>
+
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="Start">
+                    <Label Text="Рецепты" FontSize="30" FontAttributes="Italic,bold"    />
+                </StackLayout>
+
+                <StackLayout x:Name="RecipePageRecipeLayout" HorizontalOptions="Fill" WidthRequest="367.2" Spacing="15"> <!--Рецепты-->
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    
+</ContentPage>

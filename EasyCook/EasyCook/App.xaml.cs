@@ -14,7 +14,7 @@ namespace EasyCook
         public static double _SETWIDTH = _SCREENWIDTH * 0.34;
         public static double _DPI = DeviceDisplay.MainDisplayInfo.Density;
 
-        public const string DATABASE_NAME = "friends.db";
+        public const string DATABASE_NAME = "recipe.db";
         public static RecipeRepository database;
         public static RecipeRepository Database
         {
@@ -30,12 +30,13 @@ namespace EasyCook
             }
         }
 
+        public static Page BasePage;
+
         public App()
         {
             InitializeComponent();
-            MainPage = new MyTabbedPage();
-            //MainPage = new NavigationPage(new TestPage());
-
+            MainPage = new NavigationPage(new MyTabbedPage());
+            BasePage = MainPage;
         }
 
         protected override void OnStart()

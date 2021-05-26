@@ -12,6 +12,7 @@ namespace EasyCook.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MyTabbedPage : TabbedPage
     {
+       
         public MyTabbedPage()
         {
             InitializeComponent();

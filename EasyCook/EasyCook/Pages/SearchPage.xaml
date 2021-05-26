@@ -2,8 +2,30 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:EasyCook"
     x:Class="EasyCook.Pages.SearchPage">
-    <ContentPage.Content>
-        
-    </ContentPage.Content>
+
+    <StackLayout Spacing="20">
+        <StackLayout>
+            <Frame HeightRequest="-5" HasShadow="False"/>
+        </StackLayout>
+
+        <Label HorizontalOptions="Start" Text="Найти рецепт:" FontSize="30" FontAttributes="Bold" TranslationX="10"/>
+
+        <StackLayout HorizontalOptions="Start" TranslationX="10">
+            <Frame HorizontalOptions="Start" WidthRequest="367.2" Padding="0" CornerRadius="30" >
+                <local:CustomEntry x:Name="SearchEntry" TranslationX="10" Placeholder="Найти рецепт" 
+                                   FontSize="20" Completed="CustomEntry_Completed" TextChanged="CustomEntry_TextChanged"
+                                   PlaceholderColor="Gray"/>
+            </Frame>
+        </StackLayout>
+
+        <StackLayout>
+            <Frame HeightRequest="30" HasShadow="False"/>
+        </StackLayout>
+
+        <StackLayout x:Name="RecipeLayout" Spacing="15">
+            
+        </StackLayout>
+    </StackLayout>
 </ContentPage>
